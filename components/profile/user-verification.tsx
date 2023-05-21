@@ -1,13 +1,13 @@
 import { useState } from "react";
 import UserModal from "./user-verification-modal";
-import UserTradingModal from "./user-trading-password-modal";
+// import UserTradingModal from "./user-trading-password-modal";
 import * as Md from "react-icons/md";
 
 const UserVerification = ({ user, loading }: any) => {
   const [hide, setHide] = useState(false);
-  const [secondModal, setSecondModal] = useState(false);
+  // const [secondModal, setSecondModal] = useState(false);
 
-  const isTradingPassword = user?.tradingPassword ? true : false;
+  // const isTradingPassword = user?.tradingPassword ? true : false;
 
   return (
     <>
@@ -16,7 +16,7 @@ const UserVerification = ({ user, loading }: any) => {
           <Md.MdVerifiedUser />
           <button onClick={() => setHide(true)}>Start verification</button>
         </div>
-        {!isTradingPassword ? (
+        {/* {!isTradingPassword ? (
           <div className="flex items-center gap-2 text-red-400">
             <Md.MdPassword />
             <button onClick={() => setSecondModal(true)}>
@@ -30,14 +30,14 @@ const UserVerification = ({ user, loading }: any) => {
               Change Trading Password
             </button>
           </div>
-        )}
+        )} */}
       </div>
       <UserModal hide={hide} setHide={setHide} />
-      <UserTradingModal
+      {/* <UserTradingModal
         hide={secondModal}
         setHide={setSecondModal}
         heading={isTradingPassword}
-      />
+      /> */}
     </>
   );
 };

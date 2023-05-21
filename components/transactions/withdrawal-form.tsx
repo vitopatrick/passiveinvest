@@ -10,8 +10,8 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { store } from "../../firebase";
 import { toast } from "react-toastify";
-import ToggleButton from "./toggle";
-import TradingModal from "../../shared/modal/trading-modal";
+// import ToggleButton from "./toggle";
+// import TradingModal from "../../shared/modal/trading-modal";
 
 const coins = [
   "Ethereum",
@@ -25,9 +25,7 @@ const coins = [
 const WithdrawalForm = () => {
   const [amount, setAmount] = useState<string | number>("");
   const [selectedCoin, setSelectedCoin] = useState<string | number>("");
-  const [withdrawalType, setWithdrawalType] = useState<
-    string | number | boolean
-  >(false);
+  
   const [remarks, setRemarks] = useState<string>("");
   const [address, setAddress] = useState<string>("");
   const [show, setShow] = useState(false);
@@ -36,7 +34,7 @@ const WithdrawalForm = () => {
 
   const router = useRouter();
 
-  const openModal = async (e: any) => {
+  const sendWithdrawal = async (e: any) => {
     e.preventDefault();
     const person: any = await getDoc(doc(store, "/users", `${state.email}`));
     if (!amount || !selectedCoin || !remarks) {
@@ -47,10 +45,7 @@ const WithdrawalForm = () => {
       });
       return;
     }
-    setShow(true);
-  };
 
-  const sendWithdrawal = async () => {
     try {
       // get the collection Ref
       const depositRef = collection(
@@ -66,7 +61,6 @@ const WithdrawalForm = () => {
         approved: false,
         remarks,
         address,
-        automatic_withdrawal: withdrawalType ? "on" : "off",
       });
 
       setShow(false);
@@ -169,22 +163,13 @@ const WithdrawalForm = () => {
             </div>
           </div>
         </form>
-        <div className="flex items-center gap-2 my-6">
-          <ToggleButton checked={withdrawalType} change={setWithdrawalType} />
-          <span>Automatic Withdrawal off/on</span>
-        </div>
         <button
-          onClick={openModal}
+          onClick={sendWithdrawal}
           className="bg-bg rounded px-3 py-2 font-sec mt-2 w-full md:w-fit"
         >
           Send Request
         </button>
       </section>
-      <TradingModal
-        hide={show}
-        setHide={setShow}
-        tradingFunction={sendWithdrawal}
-      />
     </div>
   );
 };

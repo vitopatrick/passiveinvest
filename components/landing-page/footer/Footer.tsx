@@ -1,44 +1,18 @@
 import Link from "next/link";
 import React from "react";
+import Logo from "../../../shared/logo/Logo";
+// import Logo from "../../../shared/logo/Logo";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="w-[90%] mx-auto py-4">
-        <div className="font-bold text-teal-500/50 text-2xl uppercase underline tracking-widest">
-          Coins Exchange
+    <footer className="text-white p-5">
+      <div className="flex flex-col justify-center items-center">
+        <Logo lg={10} sm={50} />
+        <div className="text-neutral-400">
+          You can always chat with us Online 24/7 support
         </div>
-        <div className="flex md:items-center gap-8 flex-col md:flex-row my-5">
-          <div className="flex flex-col justify-between gap-3">
-            <h3 className="capitalize text-teal-500 font-bold">company</h3>
-            <div className="flex flex-col gap-3">
-              <Link href="/about" className="text-white font-regular">
-                About Us
-              </Link>
-              <Link href="/" className="text-white font-regular">
-                Home
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col justify-between gap-3">
-            <h4 className="capitalize text-teal-500 font-bold">
-              Terms & Condition
-            </h4>
-            <div className="flex flex-col gap-3">
-              <Link href="/tax" className="text-white font-regular">
-                Tax
-              </Link>
-              <Link href="/risk" className="text-white font-regular">
-                Risk & Warning
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="my-3 text-neutral-400 font-medium">
-          contact us: support@coinsexchange.live
-        </div>
-        <div className="text-neutral-400 font-regular">
-          Coins Exchange©{new Date().getFullYear()}
+        <div className="opacity-50">
+          © Coinvestar {new Date().getFullYear()}
         </div>
       </div>
     </footer>

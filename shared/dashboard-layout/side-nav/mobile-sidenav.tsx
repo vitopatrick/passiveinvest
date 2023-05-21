@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { FIRST_LINKS, SECOND_LINKS } from "../../../lib/side-nav-links";
 import { clsx } from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "../../logo/Logo";
 
 const MobileSideNav = ({ hide, setHide }: any) => {
   const pathname = usePathname();
@@ -54,8 +55,8 @@ const MobileSideNav = ({ hide, setHide }: any) => {
             {/* first links flex container */}
             <div>
               {/* logo flex container */}
-              <div className="mb-8  font-bold text-button uppercase tracking-widest underline text-xl">
-                Coins Exchange
+              <div className="p-3">
+                <Logo lg={61.5} sm={61.5} />
               </div>
               <div className="space-y-4">
                 {FIRST_LINKS.map((link) => (

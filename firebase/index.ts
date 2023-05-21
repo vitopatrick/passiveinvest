@@ -5,12 +5,13 @@ import { getStorage } from "firebase/storage";
 
 // these are the firebase config files
 const firebaseConfig = {
-  apiKey: "AIzaSyBrcfjNiWeDQzEK6gTJSObWJXnAstuGv_M",
-  authDomain: "coinsexchange-15216.firebaseapp.com",
-  projectId: "coinsexchange-15216",
-  storageBucket: "coinsexchange-15216.appspot.com",
-  messagingSenderId: "1033989116384",
-  appId: "1:1033989116384:web:93053f976bedcd2c819b85",
+  apiKey: "AIzaSyBXNAMc91BBwFKxeNQ1lrsidH80pExSFgE",
+  authDomain: "coinvesta-e20d8.firebaseapp.com",
+  projectId: "coinvesta-e20d8",
+  storageBucket: "coinvesta-e20d8.appspot.com",
+  messagingSenderId: "402565211326",
+  appId: "1:402565211326:web:b6a15e1dedc19ef74faaef",
+  measurementId: "G-8CXD0L2ZES",
 };
 
 export const app = initializeApp(firebaseConfig);

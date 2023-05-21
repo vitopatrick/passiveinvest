@@ -3,12 +3,12 @@ import React from "react";
 const AboutOurMission = () => {
   return (
     <section className="bg-bg text-white font-main">
-      <div className="w-[90%] mx-auto">
+      <div className="w-[90%] mx-auto space-y-8">
         <div className="text-3xl md:text-5xl py-3 font-bold ">Our Mission</div>
         <div className="text-neutral-300 capitalize">
-          Today, Coins Exchange is the world’s leading blockchain ecosystem,
-          with a product suite that includes the largest digital asset exchange.
-          Our Mission is to be the infrastructure service provider in crypto.
+          Today, Coinvestar is the world’s leading blockchain ecosystem, with a
+          product suite that includes the largest digital asset exchange. Our
+          Mission is to be the infrastructure service provider in crypto.
         </div>
         {/* info graphs */}
         <div>
@@ -17,7 +17,7 @@ const AboutOurMission = () => {
             <div>
               <img src="/users.png" alt="info" />
             </div>
-            <div>
+            <div className="self-center">
               <div className="text-xl md:text-3xl py-3 font-bold ">
                 Putting our users first
               </div>
@@ -25,14 +25,14 @@ const AboutOurMission = () => {
                 Users are at the heart of everything we do. From the beginning,
                 we made user protection our top priority. That’s why we’ve
                 embedded state-of-the-art security measures and strict data
-                privacy controls across the entire Coins Exchange ecosystem.
+                privacy controls across the entire Coinvestar ecosystem.
               </div>
             </div>
           </div>
           {/*  end 1 */}
           {/* start 2 */}
           <div className="md:grid grid-cols-2 gap-3 my-6">
-            <div>
+            <div className="self-center">
               <div className="text-xl md:text-3xl py-3 font-bold ">
                 Working with regulators
               </div>

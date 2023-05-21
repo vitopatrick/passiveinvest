@@ -1,4 +1,4 @@
-import Navbar from "../../components/landing-page/nav-bar";
+import Navbar from "../../components/landing-page/nav-bar/navbar";
 import Footer from "../../components/landing-page/footer/Footer";
 import TaxBody from "../../components/tax/tax-body";
 

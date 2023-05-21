@@ -2,7 +2,7 @@ import React from "react";
 import AboutOurMission from "../../components/about/about-our-mission";
 import AboutWelcome from "../../components/about/about-welcome";
 import Footer from "../../components/landing-page/footer/Footer";
-import Navbar from "../../components/landing-page/nav-bar";
+import Navbar from "../../components/landing-page/nav-bar/navbar";
 
 const AboutUs = () => {
   return (

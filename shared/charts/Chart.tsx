@@ -19,7 +19,7 @@ const Chart = () => {
   const { coin, loading } = useFetchAllCoin(selected, 30);
 
   return (
-    <div className="p-4 bg-bg text-white font-main rounded flex-1 items-stretch">
+    <div className="p-4 bg-bg text-white rounded flex-1 items-stretch">
       {/* selector */}
       <div className="mb-8 flex items-center justify-between">
         <div className="bg-card py-1 px-2 rounded focus:border-paper focus:border-[1px]">
@@ -28,15 +28,12 @@ const Chart = () => {
             value={selected}
             onChange={(e) => setCoin(e.target.value)}
           >
-            <option value="bitcoin">Bitcoin</option>
-            <option value="tether">USDT</option>
-            <option value="ethereum">Ethereum</option>
-            <option value="solana">Solana</option>
-            <option value="tron">Tron</option>
+            <option value="bitcoin">BTC/USD</option>
+            <option value="tether">USDT/USD</option>
+            <option value="ethereum">ETH/USD</option>
+            <option value="solana">SOL/USD</option>
+            <option value="tron">TRX/USD</option>
           </select>
-        </div>
-        <div className="text-paper border-paper border-[1px] px-2 rounded cursor-pointer">
-          1 Month
         </div>
       </div>
       {/* chart */}

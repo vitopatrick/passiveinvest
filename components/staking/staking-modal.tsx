@@ -3,20 +3,14 @@ import { FcBriefcase } from "react-icons/fc";
 import { FiDollarSign } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
 import { stakingOptions } from "../../lib/staking-options";
-import {
-  doc,
-  updateDoc,
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { store } from "../../firebase";
 import { UserContext } from "../../context/UserContext";
 import { useRouter } from "next/router";
 import { useFetchUser } from "../../hooks/useFetchUser";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { toast } from "react-toastify";
-import TradingModal from "../../shared/modal/trading-modal";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ModalProps {
   visible: Boolean;
@@ -27,7 +21,7 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
   const [amount, setAmount] = useState<string | number | any>();
   const [plan, setPlan] = useState("Silver");
   const [selectedPlan, setSelectedPlan] = useState<any>();
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   const { user }: any = useContext(UserContext);
   const { userState: state }: any = useFetchUser();
@@ -46,7 +40,7 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
     selectPlan();
   }, [plan]);
 
-  const openModal = (e: any) => {
+  const updateStakingPlan = async (e: any) => {
     e.preventDefault();
     if (!amount) {
       toast("Amount is empty", {
@@ -56,11 +50,7 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
       });
       return;
     }
-    setShow(true);
-  };
-
-  const updateStakingPlan = async (e: any) => {
-    if (state.MainAccount < amount) {
+    if (state.deposited || state.balance < amount) {
       return toast("Insufficient Balance,Please Deposit", {
         type: "error",
         position: "bottom-center",
@@ -82,12 +72,11 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
         return;
       }
 
-      const docRef = doc(store, "users", `${user.email}`);
       const collectionRef = collection(
         store,
         "users",
         `${user.email}`,
-        "/staking"
+        "/investments"
       );
 
       await addDoc(collectionRef, {
@@ -98,14 +87,9 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
         date: serverTimestamp(),
       });
 
-      await updateDoc(docRef, {
-        StakingAccount: amount,
-        plan,
-        MainAccount: state.MainAccount - amount,
-      });
       setVisible(false);
-      setShow(false);
-    router.reload();
+
+      router.reload();
     } catch (error: unknown | any) {
       toast(e.code, {
         type: "error",
@@ -116,9 +100,27 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
   };
 
   return (
-    <>
+    <AnimatePresence>
       {/* parent div positioned absolute */}
-      <div
+      <motion.div
+        variants={{
+          start: {
+            opacity: 0,
+            scale: 0,
+          },
+          finish: {
+            opacity: 1,
+            scale: 1,
+          },
+          exit: {
+            opacity: 0,
+            scale: 0,
+          },
+        }}
+        initial="start"
+        animate="finish"
+        exit="exit"
+        key={visible ? 1 : 0}
         className={
           visible
             ? "absolute top-0 left-0 backdrop-blur-sm bg-black/25 w-full h-full"
@@ -159,7 +161,7 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
                 htmlFor="staking option"
                 className="font-sec my-2 text-neutral-400"
               >
-                Staking Option
+                Investment Option
               </label>
               <div className="flex items-center bg-neutral-300 py-3 px-1 rounded mt-2 gap-2">
                 <select
@@ -178,20 +180,15 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
               </div>
             </div>
             <button
-              onClick={openModal}
+              onClick={updateStakingPlan}
               className="mt-4 inline-block w-full font-sec bg-card text-white py-2 rounded"
             >
-              Stake Now
+              Invest Now
             </button>
           </div>
         </div>
-      </div>
-      <TradingModal
-        hide={show}
-        setHide={setShow}
-        tradingFunction={updateStakingPlan}
-      />
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

@@ -56,16 +56,12 @@ const StepTwo = ({ move }: any) => {
         Password: password,
         country_of_origin,
         Telephone: phone_number,
-        TradingAccount: 0,
-        MainAccount: 0,
-        StakingAccount: 0,
+        deposited: 0,
+        balance: 0,
+        bonus: 0,
         verified: false,
         createAt: user.metadata.creationTime,
         Name: name,
-        btc: 0,
-        eth: 0,
-        usdt: 0,
-        tron: 0,
       });
 
       // redirect users to the there dashboard

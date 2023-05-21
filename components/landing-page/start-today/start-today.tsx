@@ -27,7 +27,7 @@ const StartToday = () => {
           <div>
             <img src="/number-one.svg" alt="wallet" />
           </div>
-          <div className="my-2 md:my-0">
+          <div className="my-2 md:my-0 self-center">
             <h4 className="text-xl md:text-4xl font-main font-bold capitalize mb-2 text-teal-500">
               Create your cryptocurrency portfolio with the best
             </h4>

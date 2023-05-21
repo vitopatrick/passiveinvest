@@ -8,7 +8,7 @@ const StakingOrder = () => {
     <section className="text-white font-main my-3">
       <div className="mx-2">
         <header>
-          <h4 className="font-semibold text-2xl py-3">Staking Orders</h4>
+          <h4 className="font-semibold text-2xl py-3">Investments</h4>
         </header>
         <StakingTable />
       </div>

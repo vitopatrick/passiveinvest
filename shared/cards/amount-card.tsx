@@ -24,4 +24,28 @@ const AmountCard = ({ accountType, amount, loading }: AmountCardType) => {
   );
 };
 
+export const PlanCard = ({
+  accountType,
+  plan,
+  loading,
+}: {
+  accountType: string;
+  plan: string;
+  loading: false;
+}) => {
+  return (
+    <div className="bg-bg font-main text-white rounded font-sec w-full p-3">
+      <div className="flex flex-col gap-3">
+        <div>
+          <h1 className="font-semibold">{accountType}</h1>
+        </div>
+        <div>
+          {loading && <SkeletonText height={10} width={200} />}
+          {!loading && <h1 className="font-bold text-2xl">{plan}</h1>}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default AmountCard;

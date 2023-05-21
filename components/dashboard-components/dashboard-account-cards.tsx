@@ -1,7 +1,6 @@
 import AmountCard from "../../shared/cards/amount-card";
 import { useFetchUser } from "../../hooks/useFetchUser";
 
-
 const DashboardAccountCards = () => {
   const { userState: user, loading }: any = useFetchUser();
   return (
@@ -12,19 +11,28 @@ const DashboardAccountCards = () => {
 
       <div className="flex md:flex-row flex-col items-center justify-between gap-3 py-3">
         <AmountCard
-          accountType={"Main Account"}
-          amount={user?.MainAccount}
+          accountType={"Deposited"}
+          amount={user?.deposited}
           loading={loading}
         />
         <AmountCard
-          accountType={"Trading Account"}
-          amount={user?.TradingAccount}
+          accountType={"Balance"}
+          amount={user?.balance}
           loading={loading}
         />
+        <AmountCard
+          accountType={"Bonus"}
+          amount={user?.bonus}
+          loading={loading}
+        />
+        {/* <PlanCard
+          accountType={"Active Plan"}
+          plan={user?.plan ? user?.plan : "N/A"}
+          loading={loading}
+        /> */}
       </div>
     </section>
   );
 };
-
 
 export default DashboardAccountCards;

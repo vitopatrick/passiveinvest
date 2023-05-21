@@ -20,7 +20,7 @@ export const useFetchStakes = () => {
         store,
         "/users",
         `/${user.email}`,
-        "/staking"
+        "/investments"
       );
       const q = query(collectionRef, orderBy("date", "asc"));
 

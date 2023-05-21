@@ -77,7 +77,7 @@ const UsersDetails = ({
           </div>
         </div>
         {/* grid child 4 */}
-        <div className="my-2 p-4 font-sec flex items-center gap-6 bg-bg rounded shadow">
+        {/* <div className="my-2 p-4 font-sec flex items-center gap-6 bg-bg rounded shadow">
           {loading && <SkeletonCircle width={50} height={50} />}
           {!loading && (
             <div className="bg-card p-3 md:p-5 rounded-full">
@@ -102,7 +102,7 @@ const UsersDetails = ({
               </div>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

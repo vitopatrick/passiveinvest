@@ -1,12 +1,9 @@
 import React from "react";
 import { RxDashboard } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
-import { FaWallet } from "react-icons/fa";
 import { AiFillMoneyCollect, AiOutlineBank } from "react-icons/ai";
 import { SiMarketo } from "react-icons/si";
-import { BsStack } from "react-icons/bs";
-import { RiExchangeDollarFill } from "react-icons/ri";
-import { FaHandshakeAltSlash } from "react-icons/fa";
+import { MdMoney } from "react-icons/md";
 
 export const FIRST_LINKS = [
   {
@@ -24,12 +21,6 @@ export const FIRST_LINKS = [
 ];
 
 export const SECOND_LINKS = [
-  {
-    key: "wallet",
-    label: "Wallet",
-    path: "/wallet",
-    icon: <FaWallet />,
-  },
   {
     key: "deposit",
     label: "Deposit",
@@ -49,16 +40,10 @@ export const SECOND_LINKS = [
     icon: <SiMarketo />,
   },
   {
-    key: "staking",
-    label: "Staking",
-    path: "/staking",
-    icon: <BsStack />,
-  },
-  {
-    key: "trading",
-    label: "Volume Staking",
-    path: "/volume-staking",
-    icon: <RiExchangeDollarFill />,
+    key: "invest",
+    label: "Invest",
+    path: "/invest",
+    icon: <MdMoney />,
   },
   // {
   //   key: "referral",

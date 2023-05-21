@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { links } from "./links";
 import MobileNavbar from "./mobile-navbar";
+import Logo from "../../../shared/logo/Logo";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -10,11 +11,8 @@ const Navbar = () => {
   return (
     <nav className="bg-bg text-white shadow-md">
       <div className="w-[90%] mx-auto py-3 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl text-teal-500 font-medium uppercase tracking-widest underline"
-        >
-          Coins Exchange
+        <Link href="/">
+          <Logo sm={80} lg={80} />
         </Link>
         {/* links */}
         <div className="flex items-center md:gap-12 justify-between">
@@ -24,7 +22,7 @@ const Navbar = () => {
               <Link
                 href={`/${link.path}`}
                 key={link.id}
-                className="capitalize font-medium hover:text-teal-500 hover:font-bold hover:underline"
+                className="capitalize font-light hover:text-teal-500 hover:font-bold hover:underline"
               >
                 {link.name}
               </Link>

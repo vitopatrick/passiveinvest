@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../components/landing-page/footer/Footer";
-import Navbar from "../../components/landing-page/nav-bar";
+import Navbar from "../../components/landing-page/nav-bar/navbar";
 import { risks } from "../../components/risk/constant/risk-file";
 import RiskBody from "../../components/risk/risk-body";
 

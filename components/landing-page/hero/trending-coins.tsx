@@ -6,7 +6,7 @@ const TrendingCoins = () => {
   return (
     <div className="w-[80%] mx-auto hidden md:block">
       <div className="py-3 px-5 w-full bg-card rounded">
-        <div className="flex justify-evenly items-center">
+        <div className="flex justify-between items-center">
           {coins.map((coin: any) => (
             <div>
               <div className="w-[15%]">

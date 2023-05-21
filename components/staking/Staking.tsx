@@ -36,9 +36,9 @@ const Staking = () => {
             </div>
             <button
               onClick={() => setVisible(true)}
-              className="mt-4 mb-2 font-sec inline-block bg-card py-1 rounded text-white  w-full hover:bg-bg"
+              className="mt-4 mb-2 capitalize font-sec inline-block bg-card py-1 rounded text-white  w-full hover:bg-bg"
             >
-              Stake now
+              invest
             </button>
           </div>
         ))}
