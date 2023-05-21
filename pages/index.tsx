@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <div className="bg-bg">
       <Navbar />
-      {/* <Hero />
-      <TrendingCoinsTable />
-      <StartToday />
-      <Platform />
-      <Brag />
-      <StartRow /> */}
+      <Hero />
+      {/*// <TrendingCoinsTable />
+      // <StartToday />
+      // <Platform />
+      // <Brag />
+      // <StartRow /> */}
       <Footer />
     </div>
   );
