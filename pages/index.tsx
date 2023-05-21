@@ -12,7 +12,8 @@ export default function Home() {
     <div className="bg-bg">
       <Navbar />
       <Hero />
-      {/*// <TrendingCoinsTable />
+      <TrendingCoinsTable />
+      {/*// 
       // <StartToday />
       // <Platform />
       // <Brag />
