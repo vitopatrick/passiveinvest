@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Platform = () => {
   return (
     <div className="mb-10">
-      <div className="mx-auto">
+      <div className="mx-auto md:w-[60%]">
         <h3 className="text-white underline text-xl md:text-2xl lg:text-6xl capitalize text-center font-bold mb-12">
           Easy to Use
         </h3>
