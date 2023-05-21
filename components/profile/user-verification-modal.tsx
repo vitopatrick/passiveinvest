@@ -54,18 +54,6 @@ const UserModal = ({ hide, setHide }: UserModalTypes) => {
         bodyClassName: "toast",
       });
 
-      // sent api request
-
-      await fetch("/api/verification", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: state.email,
-        }),
-      });
-
       router.push("/account-profile");
       // upload address
       await uploadBytes(imgRef, photo);

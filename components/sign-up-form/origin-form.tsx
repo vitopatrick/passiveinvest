@@ -38,17 +38,6 @@ const StepTwo = ({ move }: any) => {
         password
       );
 
-      await fetch("/api/welcome", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-        }),
-      });
-
       // then create the users collection for firebase
       const docRef = doc(store, "/users", `/${user.email}`);
       await setDoc(docRef, {
