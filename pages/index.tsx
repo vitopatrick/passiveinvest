@@ -15,11 +15,8 @@ export default function Home() {
       <TrendingCoinsTable />
       <StartToday />
       <Platform />
-      {/*// 
-      // 
-      // 
-      // <Brag />
-      // <StartRow /> */}
+      <Brag />
+      <StartRow />
       <Footer />
     </div>
   );

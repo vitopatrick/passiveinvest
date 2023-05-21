@@ -4,4 +4,14 @@ export const links = [
     path: "about",
     name: "about us",
   },
+  {
+    id: 2,
+    path: "contact",
+    name: "Contact",
+  },
+  {
+    id: 3,
+    path: "faq",
+    name: "FAQ",
+  },
 ];

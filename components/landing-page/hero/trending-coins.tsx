@@ -1,7 +1,7 @@
 import { useFetchAllCoins } from "../../../hooks/useFetchAllCoins";
 
 const TrendingCoins = () => {
-  const { coins, loading } = useFetchAllCoins(4);
+  const { coins } = useFetchAllCoins(4);
 
   return (
     <div className="w-[80%] mx-auto hidden md:block">
@@ -16,7 +16,7 @@ const TrendingCoins = () => {
                 <h3 className="font-medium text-xl">{coin.name} </h3>
                 <h4 className="text-sm font-medium">({coin.symbol})</h4>
               </div>
-              <div>
+              <div className="justify-self-end">
                 <h4
                   className={
                     coin.percentageChange < 0 ? "text-red-500" : "text-teal-500"

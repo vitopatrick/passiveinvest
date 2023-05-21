@@ -1,26 +1,38 @@
 export const faqs = [
   {
     id: 1,
-    question: "What is Coins Exchange",
+    question: "How can I fund my trading account?",
     answer:
-      "Coins Exchange is a crypto Exchange and defi institution,dedicated to helping new comers in crypto get started.",
+      "You can fund your account by credit cards (VISA/MasterCard), Bank wire transfer, Bitcoin, Ethereum, Litecoin, Altcoins.",
   },
   {
     id: 2,
-    question: "What is Staking",
+    question: "How quickly the funds will be added to my trading account?",
     answer:
-      "Staking is when you lock crypto assets for a set period of time to help support the operation of a blockchain. In return for staking your crypto, you earn more cryptocurrency.",
+      "The funds will be available for trading immediately, once we receive a confirmation from payment system.",
   },
   {
     id: 3,
-    question: "Does Coins Exchange accept fiat",
+    question: "What are the conditions for withdrawals?",
     answer:
-      "Yes Coins Exchange accepts fiat currencies in exchange for the equivalent value.",
+      "For security reasons, identification of the person is required for all withdrawals, regardless of the withdrawal amount.The minimum amount allowed for withdrawal is $20.",
   },
   {
     id: 4,
-    question: "Is Coins Exchange safe?",
+    question: "How quickly my withdrawal request is processed?",
     answer:
-      "Coins Exchange boasts one of the world's most sophisticated security technology and maintenance team, and is constantly upgrading our security systems to ensure the safety of user assets and accounts",
+      "coinvestar processes all withdrawal requests within 1 hour.However verification may take longer time, if client didn't submit all requested documents in time.",
+  },
+  {
+    id: 5,
+    question: "Does Coinvestar withhold a tax from payouts?",
+    answer:
+      "coinvestar doesn't withhold any taxes. However, as a customer, it is your responsibility to follow the taxes requirements in your jurisdiction.",
+  },
+  {
+    id: 6,
+    question: "How can I close my Coinvestar account?",
+    answer:
+      "Please chat with our support to request closing of your account. You will receive a confirmation when this request will be completed.",
   },
 ];

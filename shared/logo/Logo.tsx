@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Logo = ({ sm, lg }: { sm: number; lg: number }) => {
+const Logo = ({ sm = 40, lg = 40 }: { sm?: number; lg?: number }) => {
   return (
     <svg
       className={`w-[${sm}%] md:w-[${lg}%] py-3`}
