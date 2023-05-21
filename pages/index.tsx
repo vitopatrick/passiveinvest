@@ -14,9 +14,10 @@ export default function Home() {
       <Hero />
       <TrendingCoinsTable />
       <StartToday />
+      <Platform />
       {/*// 
       // 
-      // <Platform />
+      // 
       // <Brag />
       // <StartRow /> */}
       <Footer />
