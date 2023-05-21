@@ -30,7 +30,7 @@ const MobileNavbar = ({ show, close }: any) => {
         }}
         className={
           show
-            ? "absolute top-0 left-0 backdrop-blur bg-bg/50 h-screen w-screen z-30"
+            ? "absolute top-0 left-0 backdrop-blur bg-bg/40 w-full h-screen z-30"
             : "hidden"
         }
       >
