@@ -5,11 +5,8 @@ import { motion } from "framer-motion";
 
 const Platform = () => {
   return (
-    <div className="mb-10 relative">
-      <div className="p-4 opacity-5 top-1/2 left-[30%] absolute text-white text-4xl md:text-8xl font-bold tracking-widest ">
-        COINVESTAR
-      </div>
-      <div className="md:w-[70%] w-full mx-auto">
+    <div className="mb-10">
+      <div className="mx-auto">
         <h3 className="text-white underline text-xl md:text-2xl lg:text-6xl capitalize text-center font-bold mb-12">
           Easy to Use
         </h3>
