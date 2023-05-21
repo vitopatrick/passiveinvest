@@ -120,7 +120,7 @@ const DepositForm = () => {
               initial="start"
               animate="end"
               exit="exit"
-              className="w-full md:w-[50%] mx-auto bg-bg rounded p-4 space-y-3 mt-3"
+              className="w-full md:w-[50%] mx-auto bg-bg rounded py-4 px-2 space-y-3 mt-3"
             >
               <h3 className="font-bold">{selectedCoin.address}</h3>
             </motion.div>
