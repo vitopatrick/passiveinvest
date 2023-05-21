@@ -9,7 +9,7 @@ import Brag from "../components/landing-page/why-us/Brag";
 
 export default function Home() {
   return (
-    <div className="bg-bg text-text_main">
+    <div className="bg-bg w-screen">
       <Navbar />
       <Hero />
       <TrendingCoinsTable />
