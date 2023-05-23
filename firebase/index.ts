@@ -5,16 +5,15 @@ import { getStorage } from "firebase/storage";
 
 // these are the firebase config files
 const firebaseConfig = {
-  apiKey: "AIzaSyBXNAMc91BBwFKxeNQ1lrsidH80pExSFgE",
-  authDomain: "coinvesta-e20d8.firebaseapp.com",
-  projectId: "coinvesta-e20d8",
-  storageBucket: "coinvesta-e20d8.appspot.com",
-  messagingSenderId: "402565211326",
-  appId: "1:402565211326:web:b6a15e1dedc19ef74faaef",
-  measurementId: "G-8CXD0L2ZES",
+  apiKey: "AIzaSyAdOnku_4QmSDtIpyDChnAG28CnlKXHvC4",
+  authDomain: "eightcap-e3774.firebaseapp.com",
+  projectId: "eightcap-e3774",
+  storageBucket: "eightcap-e3774.appspot.com",
+  messagingSenderId: "539698828514",
+  appId: "1:539698828514:web:97465213a08f3244847abb",
 };
 
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const store = getFirestore(app);
 export const bucket = getStorage(app);
