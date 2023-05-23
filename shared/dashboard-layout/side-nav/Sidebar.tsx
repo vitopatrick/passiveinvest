@@ -2,7 +2,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FIRST_LINKS, SECOND_LINKS } from "../../../lib/side-nav-links";
 import { clsx } from "clsx";
-import Logo from "../../logo/Logo";
+// import Logo from "../../logo/Logo";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -27,9 +27,7 @@ const Sidebar = () => {
         {/* first links flex container */}
         <div>
           {/* logo flex container */}
-          <div className="p-3">
-            <Logo lg={65} sm={65} />
-          </div>
+
           <div className="space-y-5">
             {FIRST_LINKS.map((link) => (
               <Link
