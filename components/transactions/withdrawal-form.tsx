@@ -10,8 +10,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { store } from "../../firebase";
 import { toast } from "react-toastify";
-// import ToggleButton from "./toggle";
-// import TradingModal from "../../shared/modal/trading-modal";
+import WithdrawalModal from "./WithdrawalModal";
 
 const coins = [
   "Ethereum",
@@ -25,10 +24,12 @@ const coins = [
 const WithdrawalForm = () => {
   const [amount, setAmount] = useState<string | number>("");
   const [selectedCoin, setSelectedCoin] = useState<string | number>("");
-  
+
   const [remarks, setRemarks] = useState<string>("");
   const [address, setAddress] = useState<string>("");
   const [show, setShow] = useState(false);
+  const [bankWithdrawalModal, setBankWithdrawalModal] =
+    useState<boolean>(false);
 
   const { user: state }: any = useContext(UserContext);
 
@@ -163,6 +164,14 @@ const WithdrawalForm = () => {
             </div>
           </div>
         </form>
+        <div>
+          <button
+            className=" my-5 px-4 py-3 rounded bg-bg"
+            onClick={() => setBankWithdrawalModal(true)}
+          >
+            Bank Withdrawal
+          </button>
+        </div>
         <button
           onClick={sendWithdrawal}
           className="bg-bg rounded px-3 py-2 font-sec mt-2 w-full md:w-fit"
@@ -170,6 +179,10 @@ const WithdrawalForm = () => {
           Send Request
         </button>
       </section>
+      <WithdrawalModal
+        hide={bankWithdrawalModal}
+        setHide={setBankWithdrawalModal}
+      />
     </div>
   );
 };
