@@ -2,13 +2,13 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="p-3  relative bg-gradient-to-r from-green-900 via-green-700 to-green-500">
+    <section className="p-3  relative bg-gradient-to-r from-yellow-900 via-orange-700 to-green-300">
       {/* CONTAINER */}
       <div className="w-[80%] md:w-[80%] mx-auto">
         {/* COMPANY LOGO */}
         <div className="md:w-[30%] my-10">
           <img
-            src="https://d9hhrg4mnvzow.cloudfront.net/trade.eightcap.com/en/trade-smarter/forexbrokers/dc6e1b9e-forexbrokers-logo_10000000gc01r005000028.png"
+            src="https://d9hhrg4mnvzow.cloudfront.net/trade.passive trading .com/en/trade-smarter/forexbrokers/dc6e1b9e-forexbrokers-logo_10000000gc01r005000028.png"
             alt=""
           />
         </div>
@@ -27,7 +27,7 @@ const Banner = () => {
           </div>
           <div>
             <img
-              src="https://d9hhrg4mnvzow.cloudfront.net/trade.eightcap.com/en/trade-smarter/forexbrokers/777c390c-trade-smarter-8-01_10000000n40t000i00i028.png"
+              src="https://d9hhrg4mnvzow.cloudfront.net/trade.passive trading .com/en/trade-smarter/forexbrokers/777c390c-trade-smarter-8-01_10000000n40t000i00i028.png"
               alt=""
             />
           </div>

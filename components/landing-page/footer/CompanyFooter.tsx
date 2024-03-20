@@ -1,5 +1,3 @@
-import React from "react";
-
 const company = [
   {
     id: 1,
@@ -57,32 +55,32 @@ const CompanyFooter = () => {
             Margin trading involves a high level of risk, and may not be
             suitable for all investors. You should carefully consider your
             objectives, financial situation, needs and level of experience
-            before entering into any margined transactions with Eightcap, and
-            seek independent advice if necessary. Forex and Derivatives (margin
-            trading) are highly leveraged products which mean both gains and
-            losses are magnified. You should only trade in these products if you
-            fully understand the risks involved and can afford losses without
-            adversely affecting your lifestyle (including the risk of losing the
-            entirety of your initial investment). You must assess and consider
-            them carefully before making any decision about using our products
-            or services. CFDs are complex instruments and come with a high risk
-            of losing money rapidly due to leverage. The majority of retail
-            investor accounts lose money when trading CFDs. You should consider
-            whether you understand how CFDs work and whether you can afford to
-            take the high risk of losing your money.
+            before entering into any margined transactions with passive trading
+            , and seek independent advice if necessary. Forex and Derivatives
+            (margin trading) are highly leveraged products which mean both gains
+            and losses are magnified. You should only trade in these products if
+            you fully understand the risks involved and can afford losses
+            without adversely affecting your lifestyle (including the risk of
+            losing the entirety of your initial investment). You must assess and
+            consider them carefully before making any decision about using our
+            products or services. CFDs are complex instruments and come with a
+            high risk of losing money rapidly due to leverage. The majority of
+            retail investor accounts lose money when trading CFDs. You should
+            consider whether you understand how CFDs work and whether you can
+            afford to take the high risk of losing your money.
           </div>
           <div>
-            Eightcap Global Limited regulated by The Securities Commission of
-            The Bahamas (SCB) (SIA-F220).
+            passive trading Global Limited regulated by The Securities
+            Commission of The Bahamas (SCB) (SIA-F220).
           </div>
           <div>
             The information on this website is not targeted at the general
             public of any specific country and is not intended for distribution
             to residents in any jurisdiction where that distribution would be
-            unlawful or contravene regulatory requirements. Eightcap makes
-            reasonable efforts to provide accurate translations of the website
-            in other languages for your convenience. Where content is missing,
-            inaccurate or incomplete, the English version prevails.
+            unlawful or contravene regulatory requirements. passive trading
+            makes reasonable efforts to provide accurate translations of the
+            website in other languages for your convenience. Where content is
+            missing, inaccurate or incomplete, the English version prevails.
           </div>
         </div>
         {/* end of write up */}
