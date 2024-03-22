@@ -25,6 +25,9 @@ const Sidebar = () => {
       {/* parent flex container */}
       <div className="flex flex-col justify-between gap-4 p-3">
         {/* first links flex container */}
+        <div className="bg-yellow-400">
+          <img src="/logo.png" alt="" />
+        </div>
         <div>
           {/* logo flex container */}
 
