@@ -1,3 +1,2 @@
-1. Change Wallet addresses 
-2. Change Google firebase account 
-3. Change color
+1. change google account 
+2. Buy and connect domain

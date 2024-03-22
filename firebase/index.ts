@@ -5,13 +5,14 @@ import { getStorage } from "firebase/storage";
 
 // these are the firebase config files
 const firebaseConfig = {
-  apiKey: "AIzaSyAdOnku_4QmSDtIpyDChnAG28CnlKXHvC4",
-  authDomain: "eightcap-e3774.firebaseapp.com",
-  projectId: "eightcap-e3774",
-  storageBucket: "eightcap-e3774.appspot.com",
-  messagingSenderId: "539698828514",
-  appId: "1:539698828514:web:97465213a08f3244847abb",
+  apiKey: "AIzaSyCn95ZX5Y-zsb1VIoLglJNoLCAr87cpTuc",
+  authDomain: "passive-trading.firebaseapp.com",
+  projectId: "passive-trading",
+  storageBucket: "passive-trading.appspot.com",
+  messagingSenderId: "769060413412",
+  appId: "1:769060413412:web:66ad9106f0b32c9bd7f1f1",
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
