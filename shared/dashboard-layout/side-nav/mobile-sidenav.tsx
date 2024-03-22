@@ -55,9 +55,9 @@ const MobileSideNav = ({ hide, setHide }: any) => {
             {/* first links flex container */}
             <div>
               {/* logo flex container */}
-              {/* <div className="p-3">
-                <Logo lg={61.5} sm={61.5} />
-              </div> */}
+              <div className="bg-yellow-400 mb-2">
+                <img src="/logo.png" alt="" />
+              </div>
               <div className="space-y-4">
                 {FIRST_LINKS.map((link) => (
                   <Link
