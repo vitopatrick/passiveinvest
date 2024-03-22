@@ -16,12 +16,20 @@ const HeroCta = () => {
               understand that you are creating an account under our passive
               trading Global Limited regulated by the SCB, (SIA-F220).
             </p>
-            <Link
-              href="/auth/sign-up"
-              className="rounded-full px-6 py-3 bg-green-500 my-4 text-xl text-white"
-            >
-              Create Account
-            </Link>
+            <div className="my-[4rem] flex flex-col md:flex-row gap-4">
+              <Link
+                href="/auth/sign-up"
+                className="rounded-full px-6 py-3 bg-green-500 my-4 text-xl text-white"
+              >
+                Create Account
+              </Link>
+              <Link
+                href="/auth/sign-in"
+                className="rounded-full px-6 py-3 bg-yellow-500 my-4 text-xl text-white"
+              >
+                login
+              </Link>
+            </div>
           </div>
         </div>
       </div>
