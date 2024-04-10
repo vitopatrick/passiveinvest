@@ -1,18 +1,28 @@
 import { useEffect } from "react";
 
+const CHAT_SCRIPT_URL = "//code.jivosite.com/widget/7XuNj3jBGQ";
+
 export const useChatSupport = () => {
   useEffect(() => {
-    var Tawk_API: any = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1: any = document.createElement("script"),
-        s0: any = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/65fc09afa0c6737bd1233cea/1hpg8blrb";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
+    const loadChatScript = () => {
+      const chatScript = document.createElement("script");
+      chatScript.async = true;
+      chatScript.src = CHAT_SCRIPT_URL;
+
+      document.body.appendChild(chatScript);
+    };
+
+    // Load chat script on mount
+    loadChatScript();
+
+    // Cleanup function to remove script on component unmount
+    return () => {
+      const existingScript = document.querySelector(
+        `script[src="${CHAT_SCRIPT_URL}"]`
+      );
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
   }, []);
 };
-
